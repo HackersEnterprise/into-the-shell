@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if diff ./numbers_sorted_rec ./numbers/.correct1_ext 2>/dev/null; then
+  echo Correct, well done!
+else
+  if [ ! -e numbers_sorted_rec ]; then
+    echo file $PWD/numbers_sorted_rec does not exist! 1>&2
+    exit 1
+  fi
+  echo Not quite correct, try again!
+fi

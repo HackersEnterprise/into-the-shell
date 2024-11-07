@@ -1,0 +1,24 @@
+#!/bin/bash
+
+fatal_error()
+{
+  echo "[1mcheck_challenge_2: [31mFATAL ERROR:[0m $1" 1>&2
+}
+
+
+if type sha256sum >/dev/null 2>&1; then
+  if [ ! -e ./track.mp3 ]; then
+    fatal_error "track.mp3 not found!"
+    exit 1
+  fi
+  hash=$(sha256sum track.mp3 | cut -d " " -f 1)
+
+  if [ "$hash" = "$(cat mp3/hash)" ]; then
+    echo "Correct, well done!"
+  else
+    echo "Not quite there yet, try again!"
+  fi
+  exit
+fi
+
+fatal_error "Required command sha256 sum not found. Please download it"

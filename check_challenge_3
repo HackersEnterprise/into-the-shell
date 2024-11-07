@@ -1,0 +1,14 @@
+#!/bin/bash
+
+arr=(./log*)
+
+for ((i=0; i<${#arr[@]}; ++i)); do
+  if diff ${arr[i]} ./.correct3; then
+    continue
+  fi
+  echo ---\> ${arr[i]}
+  echo "Not quite correct, try again!"
+  exit 1
+done
+
+echo "Correct, well done!"

@@ -1,0 +1,35 @@
+Anywhere you are required to create a file, create it in the directory lab5 (i.e
+the directory where this file is stored) unless otherwise specified. Assume any
+commands are run from lab5 also.
+
+1) Create a sorted list of the directories in numbers and store it in a file
+   named numbers_sorted. The output should be sorted numerically, from least
+   to greatest value.
+   To check if you've produced the correct output, run the command:
+        >>> ./check_challenge_1
+
+   Extension:
+   There are more directories buried in the file tree rooted in numbers.
+   Create a sorted list of the all the directories in this tree (not including
+   numbers itself) and store it in a file named numbers_sorted_rec.
+   PRINT THE BASENAMES, NOT THE FULL PATHS.
+   To check if you've produced the correct output, run the command:
+        >>> ./check_challenge_1_ext
+
+2) The files in the mp3 directory are split into small mp3 packets that can
+   simply be pieced together to make a full song (this is a trait of the mp3
+   file format which makes it easy to deliver dynamically over the net, i.e
+   you can start playing a song before it is fully downloaded). Build the
+   mp3 in a file named track.mp3.
+   Check that you've produced the correct output by running the command:
+        >>> ./check_challenge_2
+   Play the track in your favourite music player!
+
+3) Transform the output of the file iplog such that each line reads:
+        GET / HTTP/1.1 HOST: <ip> ACCEPT: *
+   where <ip> is the ip address on each line
+   To the all the files starting with "log" in 1 command list.
+   Check you've produced the correct output by running:
+        >>> ./check_challenge_3
+
+   Can you make your command more succinct ?
