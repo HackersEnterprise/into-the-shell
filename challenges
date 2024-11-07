@@ -27,8 +27,8 @@ commands are run from lab5 also.
 
 3) Transform the output of the file iplog such that each line reads:
         GET / HTTP/1.1 HOST: <ip> ACCEPT: *
-   where <ip> is the ip address on each line
-   To the all the files starting with "log" in 1 command list.
+   where <ip> is the ip address on each line and write the output to all files
+   whose name begins with "log".
    Check you've produced the correct output by running:
         >>> ./check_challenge_3
 
